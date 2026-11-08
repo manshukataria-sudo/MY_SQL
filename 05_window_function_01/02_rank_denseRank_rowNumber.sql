@@ -28,16 +28,14 @@ SELECT *,
 ROW_NUMBER() OVER(PARTITION BY branch)
 FROM marks;
 
+
 -- assign row_number consist of branch and student_no in branch
 -- using the STRING's concatenate function CONCAT()
-
 SELECT *,
 CONCAT(branch, '-', ROW_NUMBER() OVER(PARTITION BY branch))
 FROM marks;
 
 
-
- 
 -- find top 2 most paying customers of each month
 USE zomato;
 SELECT * FROM orders;
